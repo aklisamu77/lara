@@ -28,7 +28,7 @@ ul li {
         <h3>Lara Home</h3>
         <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="/about-us">About Us</a></li>
+            <li><a href="{{url('/')}}/about-us">About Us</a></li>
             <li><a href="#">Courses</a></li>
             <li><a href="#">Contact</a></li>
         </ul>

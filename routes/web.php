@@ -12,11 +12,26 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+use App\Models\notifications;
+use App\Http\Controllers\UserController;
 
 Route::get('/', function () {
     return view('home');
 });
 
+
+//    
+//Route::post('course','ArticleController@store');
+Route::get('course/{course}','App\Http\Controllers\CourseController@show');
+Route::get('course/{course}/lesson','App\Http\Controllers\CourseController@show_lessons');
+
+Route::get('course/{course}/lesson/{lesson}','App\Http\Controllers\LessonController@show');
+
 Route::get('/about-us', function () {
+
+
+foreach (notifications::all() as $flight) {
+    echo $flight->username;
+}
     return view('about');
 });
