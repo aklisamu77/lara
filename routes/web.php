@@ -22,16 +22,16 @@ Route::get('/', function () {
 
 //    
 //Route::post('course','ArticleController@store');
+Route::get('courses','App\Http\Controllers\CourseController@index');
 Route::get('course/{course}','App\Http\Controllers\CourseController@show');
 Route::get('course/{course}/lesson','App\Http\Controllers\CourseController@show_lessons');
 
 Route::get('course/{course}/lesson/{lesson}','App\Http\Controllers\LessonController@show');
-
-Route::get('/about-us', function () {
-
+Route::get('/contact', function () { return view('contact'); });
+Route::get('/about-me', function () {
 
 foreach (notifications::all() as $flight) {
     echo $flight->username;
 }
     return view('about');
-});
+})->name('about');

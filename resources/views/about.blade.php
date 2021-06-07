@@ -1,1 +1,4 @@
-About Us
+@extends('layout.nav')
+    
+
+About us

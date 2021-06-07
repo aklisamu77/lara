@@ -17,7 +17,8 @@ class CourseController extends BaseController
     public function index()
     {
         $courses = course::all();
-        return response()->json(['message'=>'Success','data'=>$courses],200);
+        //return response()->json(['message'=>'Success','data'=>$courses],200);
+        return view('courses',['courses'=>$courses]);
     }
     
     /**
